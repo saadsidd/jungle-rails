@@ -4,6 +4,5 @@ class Admin::DashboardController < ApplicationController
   def show
     @stock_count = Product.sum(:quantity)
     @categories_count = Category.count(:id)
-    puts @categories_count
   end
 end
