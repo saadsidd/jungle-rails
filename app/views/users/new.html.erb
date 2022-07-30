@@ -1,0 +1,50 @@
+<section class="user-register-new">
+
+  <header class="page-header">
+    <h1>Register</h1>
+  </header>
+
+<%= form_for @user, url: '/users' do |form| %>
+  <% if form.object.errors.any? %>
+    <div class="alert alert-danger">
+      <strong>The following errors prevented registering:</strong>
+      <ul>
+        <% form.object.errors.full_messages.each do |error| %>
+          <li><%= error %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="form-group my-3">
+    First Name:
+    <%= form.text_field :first_name, class: 'form-control' %>
+  </div>
+
+  <div class="form-group my-3">
+    Last Name:
+    <%= form.text_field :last_name, class: 'form-control' %>
+  </div>
+
+  <div class="form-group my-3">
+    Email:
+    <%= form.email_field :email, class: 'form-control' %>
+  </div>
+  
+  <div class="form-group my-3">
+    Password:
+    <%= form.password_field :password, class: 'form-control' %>
+  </div>
+  
+  <div class="form-group my-3">
+    Password Confirmation:
+    <%= form.password_field :password_confirmation, class: 'form-control' %>
+  </div>
+
+  <br>
+
+  <%= form.submit "Submit" %>
+
+<% end %>
+
+</section>
