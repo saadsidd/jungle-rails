@@ -63,10 +63,26 @@
             <li><%= link_to 'Categories', [:admin, :categories], class: "nav-link" %></li>
           </ul>
         </li>
-        <li class="nav-item end-0">
+        <li class="nav-item">
           <%= link_to cart_path, class: "nav-link " do %> <%= fa_icon "shopping-cart" %>
           My Cart (<%= cart.size %>) <% end %>
         </li>
+        <% if current_user %>
+          <li class="nav-item end-0">
+            <span class="nav-link active">
+              Logged in as: <%= current_user.email %>&nbsp;&nbsp;
+              <%= button_to 'Logout', '/logout', class: "btn btn-danger", method: "get" %>
+            </span>
+          </li>
+        <% else %>
+          <li class="nav-item">
+            <%= button_to 'Register', '/register', class: "btn btn-secondary", method: "get" %>
+          </li>
+          &nbsp;&nbsp;
+          <li class="nav-item end-0">
+            <%= button_to 'Login', '/login', class: "btn btn-primary", method: "get" %>
+          </li>
+        <% end %>
       </ul>
     </div>
   </div>
