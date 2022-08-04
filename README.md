@@ -2,6 +2,20 @@
 
 A mini e-commerce application built with Rails 6.1 for purposes of teaching Rails by example.
 
+## Screenshots
+![User adding items to cart](https://raw.githubusercontent.com/saadsidd/jungle-rails/master/docs/shopping.gif)
+<p align="center">User adding items to cart</p>
+
+<br />
+
+![User checking out using Stripe in test mode](https://raw.githubusercontent.com/saadsidd/jungle-rails/master/docs/checkout.gif)
+<p align="center">User checking out using Stripe (test mode)</p>
+
+<br />
+
+![Admin access to create new categories/products](https://raw.githubusercontent.com/saadsidd/jungle-rails/master/docs/admin.gif)
+<p align="center">Admin access for creating categories/products</p>
+
 ## Setup
 
 1. Run `bundle install` to install dependencies
@@ -29,3 +43,4 @@ More information in their docs: <https://stripe.com/docs/testing#cards>
 - Bootstrap 5
 - PostgreSQL 9.x
 - Stripe
+- bcrypt
